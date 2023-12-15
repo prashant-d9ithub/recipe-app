@@ -1,0 +1,20 @@
+#custom-css
+{
+    background-image: url('https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#image-text
+{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card{
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+}
