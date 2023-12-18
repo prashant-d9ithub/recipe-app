@@ -3,51 +3,47 @@
 
 <div class="container my-5">
   <div class="d-flex flex-row flex-wrap gap-5">
-    <div class="card" style="width: 25rem">
+    <div class="card" style="width: 25rem" id="card1">
       <div class="card-body border-dark border-start border-5 rounded">
         <h5 class="card-title text-capitalize">Single Random Meal</h5>
         <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Some quick recipes
         </p>
         <div class="d-grid gap-2 col-6 mt-4">
-          <a href="{% url "random-meal" %}" class="btn btn-outline-dark" >Button</a>
+          <a href="{% url "random-meal" %}" class="btn btn-outline-dark" >Check Once</a>
         </div>
       </div>
     </div>
-    <div class="card" style="width: 25rem">
+    <div class="card" style="width: 25rem" id="card1">
       <div class="card-body border-dark border-start border-5 rounded">
         <h5 class="card-title text-capitalize">Meal by Name</h5>
         <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Some recipes by sreach it name
         </p>
         <div class="d-grid gap-2 col-6 mt-4">
-          <button class="btn btn-outline-dark" type="button">Button</button>
+          <a href="{% url "name-meal" %}" class="btn btn-outline-dark" >Check Once</a>
         </div>
       </div>
     </div>
-    <div class="card" style="width: 25rem">
+    <div class="card" style="width: 25rem" id="card1">
       <div class="card-body border-dark border-start border-5 rounded">
         <h5 class="card-title text-capitalize">meals by first letter</h5>
         <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Some quick Recipe by its First Letter
         </p>
         <div class="d-grid gap-2 col-6 mt-4">
-          <button class="btn btn-outline-dark" type="button">Button</button>
+          <a href="{% url "letter-meal" %}" class="btn btn-outline-dark" >Check Once</a>
         </div>
       </div>
     </div>
-    <div class="card" style="width: 25rem">
+    <div class="card" style="width: 25rem" id="card1">
       <div class="card-body border-dark border-start border-5 rounded">
         <h5 class="card-title text-capitalize">all meal categories</h5>
         <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Category wise Filter
         </p>
         <div class="d-grid gap-2 col-6 mt-4">
-          <button class="btn btn-outline-dark" type="button">Button</button>
+          <a href="{% url "category-one" %}" class="btn btn-outline-dark" >Check Once</a>
         </div>
       </div>
     </div>

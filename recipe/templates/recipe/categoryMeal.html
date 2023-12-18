@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block title %}
+<title>Category Wise</title>
+{% endblock title %} {% block content %}
+<div class="container my-3">
+  {% if all_meals %}
+  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+    {% for i in all_meals %}
+    <div class="col">
+      <div class="card">
+        <img src="{{i.Thumb}}" class="card-img-top" alt="{{i.Name}}" />
+        <div class="card-body text-bg-dark">
+          <h5 class="">{{i.Name}}</h5>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="container text-danger h2">No Recipe for This Letter</div>
+  {% endif %}
+</div>
+
+{% endblock content %}

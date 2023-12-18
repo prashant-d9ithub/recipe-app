@@ -1,0 +1,73 @@
+{% extends "base.html" %} {% block title %}<title>Search By Name</title>
+{% endblock title %} {% block content %}
+
+<div class="container my-3">
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="row w-50">
+      <div class="col-9">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter Recipe Name"
+          name="recipe"
+        />
+      </div>
+      <div class="col-3">
+        <div class="d-grid">
+          <button class="btn btn-outline-dark" type="submit">Search</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+{% if all_meals %}
+
+{% for i in all_meals %}
+<div class="container my-5">
+  <div class="row">
+    <div class="col-7 p-4">
+      <p><span class="fw-bold h3">Instruction</span>: {{i.Instruction}}</p>
+      <h1>Ingredients :</h1>
+      <div class="container mt-3">
+        <div class="row">
+          {% for ing,measure in i.mylist %} {% if ing and ing.strip %}
+          <div class="form-check col-6 py-1">
+            <input class="form-check-input" type="checkbox" id="{{ing}}" />
+            <label class="form-check-label" for="{{ing}}">
+              {{measure}} - {{ing}}
+            </label>
+          </div>
+          {% endif %} {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="col-5 position-static">
+      <div
+        class="card border border-2 border-dark sticky-top"
+        style="width: 25rem"
+        id="card1"
+      >
+        <img src="{{i.Thumb}}" alt="{{i.Name}}" class="card-img-top h-25" />
+        <div class="card-body">
+          <h5 class="text-center text-bg-dark p-1">{{i.Name}}</h5>
+          <div class="row mt-3 p-0">
+            <p class="card-text col-6">Drink : {{i.Drink}}</p>
+            <p class="card-text col-6">Category : {{i.Category}}</p>
+            <p class="card-text col-6">Area : {{i.Area}}</p>
+            <p class="card-text col-6">Tags : {{i.Tags}}</p>
+          </div>
+          <div class="d-grid">
+            <a href="{{i.Youtube}}" class="btn btn-outline-dark">Youtube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+</div>
+{% endfor %} 
+{% else %}
+<div>Search Recipe with Name</div>
+{% endif %} {% endblock content %}

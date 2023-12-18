@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %}<title>Recipe By Category</title>
+{% endblock title %} {% block content %}
+
+<div class="container my-5">
+    <div class="row">
+        {% for i in categorys %}
+        <div class="col btn btn-outline-dark p-3 rounded-4 m-4">
+            <a href="{% url "categorys" i.strCategory %}" class="h5 text-danger text-decoration-none">{{i.strCategory}}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
