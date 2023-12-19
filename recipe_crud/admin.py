@@ -4,4 +4,4 @@ from .models import Recipe
 # Register your models here.
 @admin.register(Recipe)
 class RecipeAdmin(admin.ModelAdmin):
-    list_display = ('id','rname','rcategory','rarea','rdrink','rinstruction')
+    list_display = ('id','rname','rcategory','rarea','rdrink','rinstruction','rvideoLink')

@@ -14,7 +14,8 @@ def crud(request):
             ra = fm.cleaned_data['rarea']
             rd = fm.cleaned_data['rdrink']
             ri = fm.cleaned_data['rinstruction']
-            reg = Recipe(rname=rn,rcategory=rc,rarea=ra,rdrink=rd,rinstruction=ri)
+            rv = fm.cleaned_data['rvideoLink']
+            reg = Recipe(rname=rn,rcategory=rc,rarea=ra,rdrink=rd,rinstruction=ri,rvideoLink=rv)
             reg.save()
             fm = RecipeAdd()
     else :
@@ -40,7 +41,8 @@ def updateRecipe(request,id):
             ra = fm.cleaned_data['rarea']
             rd = fm.cleaned_data['rdrink']
             ri = fm.cleaned_data['rinstruction']
-            reg = Recipe(rname=rn,rcategory=rc,rarea=ra,rdrink=rd,rinstruction=ri)
+            rv = fm.cleaned_data['rvideoLink']
+            reg = Recipe(rname=rn,rcategory=rc,rarea=ra,rdrink=rd,rinstruction=ri,rvideoLink=rv)
             reg.save()
     else:
         

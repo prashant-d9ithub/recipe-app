@@ -7,3 +7,4 @@ class Recipe(models.Model):
     rarea = models.CharField(max_length=50)
     rdrink = models.CharField(max_length=50)
     rinstruction = models.TextField()
+    rvideoLink = models.URLField(blank=True,null=True)
